@@ -140,7 +140,7 @@
           </a>
           <div class="collapse" id="ui-basic">
             <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" th:href="@{/coordinators}">Coordinators</a></li>
+              <li class="nav-item"> <a class="nav-link" th:href="@{/Coordinators}">Coordinators</a></li>
               <li class="nav-item"> <a class="nav-link" th:href="@{/workassign}">Work Assignment</a></li>
               <!-- <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li> -->
             </ul>
@@ -154,7 +154,7 @@
           </a>
           <div class="collapse" id="form-elements">
             <ul class="nav flex-column sub-menu">
-              <li class="nav-item"><a class="nav-link" th:href="@{/registered}">Registered</a></li>
+              <li class="nav-item"><a class="nav-link" th:href="@{/Registered}">Registered</a></li>
               <li class="nav-item"><a class="nav-link" th:href="@{/paymentpaid}">Payment Paid</a></li>
             </ul>
           </div>
@@ -209,7 +209,10 @@
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title">Participants</h4>
-                <p class="card-description">Add class <code>.table</code></p>
+<!--                <p class="card-description">Add class <code>.table</code></p>-->
+                <a th:href="@{/createp}" class="btn btn-primary btn-rounded btn-fw">
+                  Create
+                </a>
                 <div class="table-responsive">
                   <table class="table large-table">
                     <thead>
