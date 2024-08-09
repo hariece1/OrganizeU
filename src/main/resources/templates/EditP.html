@@ -128,7 +128,7 @@
                     </a>
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" th:href="@{/coordinators}">Coordinators</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/Coordinators}">Coordinators</a></li>
                             <li class="nav-item"> <a class="nav-link" th:href="@{/workassign}">Work Assignment</a></li>
                             <!-- <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li> -->
                         </ul>
@@ -142,7 +142,7 @@
                     </a>
                     <div class="collapse" id="form-elements">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"><a class="nav-link" th:href="@{/registered}">Registered</a></li>
+                            <li class="nav-item"><a class="nav-link" th:href="@{/Registered}">Registered</a></li>
                             <li class="nav-item"><a class="nav-link" th:href="@{/paymentpaid}">Payment Paid</a></li>
                         </ul>
                     </div>
@@ -205,45 +205,93 @@
                                         <div class="col-md-6 grid-margin stretch-card">
                                             <div class="card">
                                                 <div class="card-body">
-                                                    <h4 class="card-title">Default form</h4>
-                                                    <p class="card-description"> Basic form layout </p>
-                                                    <form class="forms-sample" th:action="@{/update/participants{id}" method="post" th:object="${}" >
+                                                    <h4 class="card-title">Details</h4>
+                                                    <!--                                        <p class="card-description"> Basic form layout </p>-->
+                                                    <form class="forms-sample" th:action="@{/updatepart/{id}(id=${updatepart.id})}" method="post" th:object="${updatepart}">
                                                         <div class="form-group">
-                                                            <label for="name">Name</label>
-                                                            <input type="text" class="form-control" th:field="*{name}" id="name" placeholder="${updatepart.name}">
+                                                            <!--                                                <span th:text="${participant1.name}"></span>-->
+                                                            <!--                                                <label for="exampleInputUsername1">Username</label>-->
+                                                            <!--                                                <p>ID: <span th:text="${updatepart.id}"></span></p>-->
+                                                            <!--                                                <input type="text" class="form-control" id="exampleInputUsername1" th:field="*{name}">-->
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="email">Email address</label>
-                                                            <input type="email" class="form-control" th:field="*{email}" id="email" th:text="${participant.name}">
+                                                            <label for="exampleInputEmail1">Email address</label>
+                                                            <!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                                                   name="email" placeholder="Email"
+                                                                   th:field="*{email}"
+                                                                   th:value="${updatepart.email}">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="rollno">Roll NO</label>
-                                                            <input type="text" class="form-control" th:field="*{rollno}" id="rollno" placeholder="rollno">
+                                                            <label for="College">College</label>
+                                                            <!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                            <input type="text" class="form-control" id="College"
+                                                                   name="email" placeholder="Email"
+                                                                   th:field="*{college}"
+                                                                   th:value="${updatepart.college}">
+                                                            <!--                                                <label for="exampleInputPassword1">Password</label>-->
+                                                            <!--                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="college">College</label>
-                                                            <input type="text" class="form-control" th:field="*{college}" id="college" placeholder="college">
+                                                            <!--                                                <label for="exampleInputConfirmPassword1">Confirm Password</label>-->
+                                                            <!--                                                <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">-->
+                                                            <label for="Roll NO">Roll No</label>
+                                                            <!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                            <input type="text" class="form-control" id="Roll NO"
+                                                                   name="email" placeholder="Email"
+                                                                   th:field="*{rollno}"
+                                                                   th:value="${updatepart.rollno}">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="mobile">Mobile</label>
-                                                            <input type="text" class="form-control" th:field="*{mobile}" id="mobile" placeholder="mobile">
+                                                            <!--                                                <label for="exampleInputConfirmPassword1">Confirm Password</label>-->
+                                                            <!--                                                <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">-->
+                                                            <label for="Name">Name</label>
+                                                            <!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                            <input type="text" class="form-control" id="Name"
+                                                                   name="email" placeholder="Email"
+                                                                   th:field="*{name}"
+                                                                   th:value="${updatepart.name}">
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="eventno">Event NO</label>
-                                                            <input type="text" class="form-control" th:field="*{eventno}" id="eventno" placeholder="Event No">
+                                                            <!--                                                <label for="exampleInputConfirmPassword1">Confirm Password</label>-->
+                                                            <!--                                                <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">-->
+                                                            <label for="Mobile">Mobile</label>
+                                                            <!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                            <input type="text" class="form-control" id="Mobile"
+                                                                   name="email" placeholder="Email"
+                                                                   th:field="*{mobile}"
+                                                                   th:value="${updatepart.mobile}">
+                                                            <div class="form-group">
+                                                                <!--                                                <label for="exampleInputConfirmPassword1">Confirm Password</label>-->
+                                                                <!--                                                <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">-->
+                                                                <label for="Event">Event</label>
+                                                                <!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                                <input type="text" class="form-control" id="Event"
+                                                                       name="email" placeholder="Email"
+                                                                       th:field="*{eventno}"
+                                                                       th:value="${updatepart.eventno}">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <!--                                                <label for="exampleInputConfirmPassword1">Confirm Password</label>-->
+                                                                <!--                                                <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">-->
+                                                                <label for="Status">Status</label>
+                                                                <!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                                <input type="text" class="form-control" id="Status"
+                                                                       name="email" placeholder="Email"
+                                                                       th:field="*{status}"
+                                                                       th:value="${updatepart.status}">
+                                                            </div>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label for="Status">Status</label>
-                                                            <input type="text" class="form-control" th:field="*{status}" id="status" placeholder="Status">
-                                                        </div>
-                                                        <!--                                                        <div class="form-check">-->
-                                                        <!--                                                            <label class="form-check-label text-muted">-->
-                                                        <!--                                                                <input type="checkbox" class="form-check-input" required>-->
-                                                        <!--                                                                <a href="#">Remember me</a>-->
-                                                        <!--                                                                <i class="input-helper"></i></label>-->
-                                                        <!--                                                        </div>-->
-                                                        <button type="submit" class="btn btn-primary me-2">Submit</button>
-                                                        <button class="btn btn-light">Cancel</button>
+                                                        <!--                                            <div class="form-check">-->
+                                                        <!--                                                <label class="form-check-label text-muted">-->
+                                                        <!--                                                    <input type="checkbox" class="form-check-input" required>-->
+                                                        <!--                                                    <a href="#">Remember me</a>-->
+                                                        <!--&lt;!&ndash;                                                    <i class="input-helper"></i></label>&ndash;&gt;-->
+                                                        <!--                                            </div>-->
+<!--                                                                                                    <form action="/update/participants{id}(id=${updatepart.id})" method="post">-->
+                                                                                                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+<!--                                                                                                    </form>-->
+                                                        <!--                                            <button class="btn btn-light">Cancel</button>-->
                                                     </form>
                                                 </div>
                                             </div>

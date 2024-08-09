@@ -91,21 +91,27 @@ public class AppController {
     @GetMapping("/show/participants/{id}")
     public String ShowP(@PathVariable("id") Long id,Model model){
         Participants participant1 = participantsService.ShowP(id);
-        System.out.println(participant1);
+      //  System.out.println(participant1);
         model.addAttribute("participant1",participant1);
         return "ShowP";
     }
 
-    @GetMapping("/updateview/participants/{id}")
+    @GetMapping("/update/participants/{id}")
     public String updateView(@PathVariable("id") Long id,Model model){
         Participants updatepart = participantsService.updateView(id);
+      //  System.out.println(updatepart);
         model.addAttribute("updatepart",updatepart);
         return "EditP";
     }
 
-    @PutMapping("/update/participants{id}")
-    public Participants updateParticipants(@PathVariable("id") Long id,@RequestBody Participants participants){
-        return participantsService.updateParticipants(id,participants);
+    @PostMapping("/updatepart/{id}")
+    public String updateParticipants(@PathVariable("id") Long id,@ModelAttribute("updatepart") Participants user){
+        System.out.println("I AM HERE");
+        System.out.println(user.getName());
+        participantsService.updateParticipants(id,user);
+        return "redirect:/Registered";
     }
+
+
 
 }

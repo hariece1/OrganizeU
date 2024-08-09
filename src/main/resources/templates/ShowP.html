@@ -199,38 +199,78 @@
                                 <h3 class="font-weight-bold">Welcome Admin</h3>
                                 <!--                <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6>-->
                             </div>
-                            <div class="col-md-6 grid-margin stretch-card">
+                            <div class="col-md-9 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title">Default form</h4>
-                                        <p class="card-description"> Basic form layout </p>
+                                        <h4 class="card-title">Details</h4>
+<!--                                        <p class="card-description"> Basic form layout </p>-->
                                         <form class="forms-sample">
                                             <div class="form-group">
-                                                <span th:text="${participant1.name}"></span>
+<!--                                                <span th:text="${participant1.name}"></span>-->
 <!--                                                <label for="exampleInputUsername1">Username</label>-->
 <!--                                                <p>ID: <span th:text="${updatepart.id}"></span></p>-->
-                                                <input type="text" class="form-control" id="exampleInputUsername1" th:field="*{name}">
+<!--                                                <input type="text" class="form-control" id="exampleInputUsername1" th:field="*{name}">-->
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+<!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                       name="email" placeholder="Email" disabled
+                                                       th:value="${participant1.email}">
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                                <label for="College">College</label>
+                                                <!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                <input type="email" class="form-control" id="College"
+                                                       name="email" placeholder="Email" disabled
+                                                       th:value="${participant1.college}">
+<!--                                                <label for="exampleInputPassword1">Password</label>-->
+<!--                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputConfirmPassword1">Confirm Password</label>
-                                                <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
+<!--                                                <label for="exampleInputConfirmPassword1">Confirm Password</label>-->
+<!--                                                <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">-->
+                                                <label for="Roll NO">Email address</label>
+                                                <!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                <input type="email" class="form-control" id="Roll NO"
+                                                       name="email" placeholder="Email" disabled
+                                                       th:value="${participant1.rollno}">
                                             </div>
-                                            <div class="form-check">
-                                                <label class="form-check-label text-muted">
-                                                    <input type="checkbox" class="form-check-input" required>
-                                                    <a href="#">Remember me</a>
-                                                    <i class="input-helper"></i></label>
+                                            <div class="form-group">
+                                                <!--                                                <label for="exampleInputConfirmPassword1">Confirm Password</label>-->
+                                                <!--                                                <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">-->
+                                                <label for="Name">Name</label>
+                                                <!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                <input type="email" class="form-control" id="Name"
+                                                       name="email" placeholder="Email" disabled
+                                                       th:value="${participant1.name}">
                                             </div>
-                                            <button type="submit" class="btn btn-primary me-2">Submit</button>
-                                            <button class="btn btn-light">Cancel</button>
+                                            <div class="form-group">
+                                                <!--                                                <label for="exampleInputConfirmPassword1">Confirm Password</label>-->
+                                                <!--                                                <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">-->
+                                                <label for="Mobile">Mobile</label>
+                                                <!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                <input type="email" class="form-control" id="Mobile"
+                                                       name="email" placeholder="Email" disabled
+                                                       th:value="${participant1.mobile}">
+                                                <div class="form-group">
+                                                    <!--                                                <label for="exampleInputConfirmPassword1">Confirm Password</label>-->
+                                                    <!--                                                <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">-->
+                                                    <label for="Event & Status">Event & Status</label>
+                                                    <!--                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">-->
+                                                    <input type="email" class="form-control" id="Event & Status"
+                                                           name="email" placeholder="Email" disabled
+                                                           th:value="${participant1.status} + ', ' + ${participant1.eventno}">
+                                                </div>
+                                            </div>
+<!--                                            <div class="form-check">-->
+<!--                                                <label class="form-check-label text-muted">-->
+<!--                                                    <input type="checkbox" class="form-check-input" required>-->
+<!--                                                    <a href="#">Remember me</a>-->
+<!--&lt;!&ndash;                                                    <i class="input-helper"></i></label>&ndash;&gt;-->
+<!--                                            </div>-->
+<!--                                            <button type="submit" class="btn btn-primary me-2">Submit</button>-->
+<!--                                            <button class="btn btn-light">Cancel</button>-->
                                         </form>
                                     </div>
                                 </div>
