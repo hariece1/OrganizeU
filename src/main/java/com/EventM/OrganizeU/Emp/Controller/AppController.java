@@ -19,10 +19,36 @@ public class AppController {
     @Autowired
     private ParticipantsService participantsService;
 
+    @GetMapping("/")
+    public String homme(Model model) {
+        List<Participants> participants = participantsService.fetchregistered();
+     //   System.out.println(participants);
+        int totalpart = participantsService.gettotal();
+        int totalpend = participantsService.getpend();
+        int totalcomp = participantsService.getCompleted();
+        int totalinit = participantsService.getintiated();
+//        System.out.println(totalpart);
+        model.addAttribute("totalpart",totalpart);
+        model.addAttribute("totalpend",totalpend);
+        model.addAttribute("totalcomp",totalcomp);
+        model.addAttribute("totalinit",totalinit);
+        model.addAttribute("participants",participants);
+        return "index";
+    }
     @GetMapping("/dashboard")
     public String home(Model model) {
         List<Participants> participants = participantsService.fetchregistered();
+        int totalpart = participantsService.gettotal();
+        int totalpend = participantsService.getpend();
+        int totalcomp = participantsService.getCompleted();
+        int totalinit = participantsService.getintiated();
+        System.out.println(totalpart);
+        model.addAttribute("totalpart",totalpart);
+        model.addAttribute("totalpend",totalpend);
+        model.addAttribute("totalcomp",totalcomp);
+        model.addAttribute("totalinit",totalinit);
         model.addAttribute("participants",participants);
+
         return "index";
     }
 
@@ -104,9 +130,17 @@ public class AppController {
         return "EditP";
     }
 
+    @GetMapping("/update/coordinator/{id}")
+    public String updateViewC(@PathVariable("id") Long id,Model model){
+        Coordinator updatepart = coordinatorService.updateView(id);
+        System.out.println(updatepart);
+        model.addAttribute("updatepart",updatepart);
+        return "EditO";
+    }
+
     @PostMapping("/updatepart/{id}")
     public String updateParticipants(@PathVariable("id") Long id,@ModelAttribute("updatepart") Participants user){
-        System.out.println("I AM HERE");
+//        System.out.println("I AM HERE");
         System.out.println(user.getName());
         participantsService.updateParticipants(id,user);
         return "redirect:/Registered";

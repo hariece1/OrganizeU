@@ -268,8 +268,8 @@
                   <div class="col-md-6 mb-4 stretch-card transparent">
                     <div class="card card-tale">
                       <div class="card-body">
-                        <p class="mb-4">Registered Today</p>
-                        <p class="fs-30 mb-2">0</p>
+                        <p class="mb-4">Initiated</p>
+                        <p class="fs-30 mb-2" th:text="${totalinit}"></p>
                         <p>10.00% (30 days)</p>
                       </div>
                     </div>
@@ -278,7 +278,7 @@
                     <div class="card card-dark-blue">
                       <div class="card-body">
                         <p class="mb-4">Total Registration</p>
-                        <p class="fs-30 mb-2">90</p>
+                        <p class="fs-30 mb-2" th:text="${totalpart}"></p>
                         <p>22.00% (30 days)</p>
                       </div>
                     </div>
@@ -289,7 +289,7 @@
                     <div class="card card-light-blue">
                       <div class="card-body">
                         <p class="mb-4">Registration Fee paid</p>
-                        <p class="fs-30 mb-2">3</p>
+                        <p class="fs-30 mb-2" th:text="${totalcomp}"></p>
                         <p>2.00% (30 days)</p>
                       </div>
                     </div>
@@ -298,7 +298,7 @@
                     <div class="card card-light-danger">
                       <div class="card-body">
                         <p class="mb-4">Pending Registration</p>
-                        <p class="fs-30 mb-2">87</p>
+                        <p class="fs-30 mb-2" th:text="${totalpend}"></p>
                         <p>0.22% (30 days)</p>
                       </div>
                     </div>
@@ -321,9 +321,9 @@
                             <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
                               <div class="ml-xl-4 mt-3">
                                 <p class="card-title">Detailed Reports</p>
-                                <h1 class="text-primary">2132</h1>
+                                <h1 class="text-primary" th:text="${totalpart}"></h1>
                                 <h3 class="font-weight-500 mb-xl-4 text-primary">Registration</h3>
-                                <p class="mb-2 mb-xl-0">Maximum registration of students from colleges</p>
+<!--                                <p class="mb-2 mb-xl-0">Maximum registration of students from colleges</p>-->
                               </div>
                             </div>
                             <div class="col-md-12 col-xl-9">
@@ -332,69 +332,69 @@
                                   <div class="table-responsive mb-3 mb-md-0 mt-3">
                                     <table class="table table-borderless report-table">
                                       <tr>
-                                        <td class="text-muted">KCT</td>
+<!--                                        <td class="text-muted">KCT</td>-->
                                         <td class="w-100 px-0">
-                                          <div class="progress progress-md mx-4">
-                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                          </div>
+<!--                                          <div class="progress progress-md mx-4">-->
+<!--                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                                          </div>-->
                                         </td>
                                         <td>
-                                          <h5 class="font-weight-bold mb-0">213</h5>
+<!--                                          <h5 class="font-weight-bold mb-0">213</h5>-->
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td class="text-muted">CIT</td>
+<!--                                        <td class="text-muted">CIT</td>-->
                                         <td class="w-100 px-0">
-                                          <div class="progress progress-md mx-4">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                          </div>
+<!--                                          <div class="progress progress-md mx-4">-->
+<!--                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                                          </div>-->
                                         </td>
                                         <td>
-                                          <h5 class="font-weight-bold mb-0">183</h5>
+<!--                                          <h5 class="font-weight-bold mb-0">183</h5>-->
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td class="text-muted">SKCET</td>
+<!--                                        <td class="text-muted">SKCET</td>-->
                                         <td class="w-100 px-0">
-                                          <div class="progress progress-md mx-4">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                          </div>
+<!--                                          <div class="progress progress-md mx-4">-->
+<!--                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                                          </div>-->
                                         </td>
                                         <td>
-                                          <h5 class="font-weight-bold mb-0">924</h5>
+<!--                                          <h5 class="font-weight-bold mb-0">924</h5>-->
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td class="text-muted">SKCT</td>
+<!--                                        <td class="text-muted">SKCT</td>-->
                                         <td class="w-100 px-0">
-                                          <div class="progress progress-md mx-4">
-                                            <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                          </div>
+<!--                                          <div class="progress progress-md mx-4">-->
+<!--                                            <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                                          </div>-->
                                         </td>
                                         <td>
-                                          <h5 class="font-weight-bold mb-0">114</h5>
+<!--                                          <h5 class="font-weight-bold mb-0">114</h5>-->
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td class="text-muted">SRIT</td>
+<!--                                        <td class="text-muted">SRIT</td>-->
                                         <td class="w-100 px-0">
-                                          <div class="progress progress-md mx-4">
-                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                          </div>
+<!--                                          <div class="progress progress-md mx-4">-->
+<!--                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                                          </div>-->
                                         </td>
                                         <td>
-                                          <h5 class="font-weight-bold mb-0">560</h5>
+<!--                                          <h5 class="font-weight-bold mb-0">560</h5>-->
                                         </td>
                                       </tr>
                                       <tr>
-                                        <td class="text-muted">SVCE</td>
+<!--                                        <td class="text-muted">SVCE</td>-->
                                         <td class="w-100 px-0">
-                                          <div class="progress progress-md mx-4">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                          </div>
+<!--                                          <div class="progress progress-md mx-4">-->
+<!--                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                                          </div>-->
                                         </td>
                                         <td>
-                                          <h5 class="font-weight-bold mb-0">793</h5>
+<!--                                          <h5 class="font-weight-bold mb-0">793</h5>-->
                                         </td>
                                       </tr>
                                     </table>
@@ -548,77 +548,7 @@
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-4 stretch-card grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-title mb-0">Projects</p>
-                    <div class="table-responsive">
-                      <table class="table table-borderless">
-                        <thead>
-                          <tr>
-                            <th class="ps-0  pb-2 border-bottom">Places</th>
-                            <th class="border-bottom pb-2">Orders</th>
-                            <th class="border-bottom pb-2">Users</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="ps-0">Kentucky</td>
-                            <td>
-                              <p class="mb-0"><span class="font-weight-bold me-2">65</span>(2.15%)</p>
-                            </td>
-                            <td class="text-muted">65</td>
-                          </tr>
-                          <tr>
-                            <td class="ps-0">Ohio</td>
-                            <td>
-                              <p class="mb-0"><span class="font-weight-bold me-2">54</span>(3.25%)</p>
-                            </td>
-                            <td class="text-muted">51</td>
-                          </tr>
-                          <tr>
-                            <td class="ps-0">Nevada</td>
-                            <td>
-                              <p class="mb-0"><span class="font-weight-bold me-2">22</span>(2.22%)</p>
-                            </td>
-                            <td class="text-muted">32</td>
-                          </tr>
-                          <tr>
-                            <td class="ps-0">North Carolina</td>
-                            <td>
-                              <p class="mb-0"><span class="font-weight-bold me-2">46</span>(3.27%)</p>
-                            </td>
-                            <td class="text-muted">15</td>
-                          </tr>
-                          <tr>
-                            <td class="ps-0">Montana</td>
-                            <td>
-                              <p class="mb-0"><span class="font-weight-bold me-2">17</span>(1.25%)</p>
-                            </td>
-                            <td class="text-muted">25</td>
-                          </tr>
-                          <tr>
-                            <td class="ps-0">Nevada</td>
-                            <td>
-                              <p class="mb-0"><span class="font-weight-bold me-2">52</span>(3.11%)</p>
-                            </td>
-                            <td class="text-muted">71</td>
-                          </tr>
-                          <tr>
-                            <td class="ps-0 pb-0">Louisiana</td>
-                            <td class="pb-0">
-                              <p class="mb-0"><span class="font-weight-bold me-2">25</span>(1.32%)</p>
-                            </td>
-                            <td class="pb-0">14</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
             <div class="row">
               <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
@@ -629,19 +559,34 @@
                       <div class="col-12">
                         <div class="table-responsive">
                           <table id="example" class="display expandable-table" style="width:100%">
-                            <thead>
+                              <thead>
                               <tr>
-                                <th>S.NO</th>
+                                <th>Sno</th>
                                 <th>Name</th>
-                                <th>Roll No</th>
-                                <th>Year</th>
-                                <th>Project ID</th>
-                                <th>Status</th>
-                                <th>Updated at</th>
-                                <th></th>
+                                <th>College</th>
+                                <th>event</th>
+                                <th>status</th>
                               </tr>
-                            </thead>
-                          </table>
+                              </thead>
+                              <tbody>
+                              <tr th:each="participant, iterStat : ${participants}" th:if="${iterStat.index lt 10}">
+                                <td th:text="${iterStat.index + 1}"></td>
+                                <td th:text="${participant.name}"></td>
+                                <td th:text="${participant.college}"></td>
+
+                                <td th:text="${participant.eventno == 0 ? 'Hackathon' :
+                   participant.eventno == 1 ? 'Line Follower' :
+                   participant.eventno == 2 ? 'Other Event 1' :
+                   participant.eventno == 3 ? 'Other Event 2' :
+                   participant.eventno == 4 ? 'Other Event 3' :
+                   'Unknown Event'}"></td>
+                                <td>
+                                  <label th:if="${participant.status == 1}" class="badge badge-danger">Pending</label>
+                                  <label th:if="${participant.status == 2}" class="badge badge-success">Approved</label>
+                                  <label th:if="${participant.status == 3}" class="badge badge-info">Initiated</label>
+                                </td>
+                              </tbody>
+                            </table>
                         </div>
                       </div>
                     </div>

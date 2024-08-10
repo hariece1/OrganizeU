@@ -48,6 +48,30 @@ public class ParticipantsServiceImpl implements ParticipantsService{
         return participantsRepo.getReferenceById(id);
     }
 
+    @Override
+    public int gettotal() {
+        int total = participantsRepo.gettotalpart();
+        return total;
+    }
+
+    @Override
+    public int getpend() {
+        int total = participantsRepo.getpending();
+        return total;
+    }
+
+    @Override
+    public int getCompleted() {
+        int total = participantsRepo.getcompleted();
+        return total;
+    }
+
+    @Override
+    public int getintiated() {
+        int total = participantsRepo.getintiated();
+        return total;
+    }
+
     public Participants save(Participants user){
         System.out.println("GOt at service");
         System.out.println(user.toString());

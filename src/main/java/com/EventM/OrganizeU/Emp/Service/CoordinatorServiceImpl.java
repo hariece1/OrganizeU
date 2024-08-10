@@ -19,6 +19,12 @@ public class CoordinatorServiceImpl implements CoordinatorService{
     }
 
     @Override
+    public Coordinator updateView(Long id) {
+        Coordinator coordinator = coordinatorRepository.findById(id).get();
+        return coordinator;
+    }
+
+    @Override
     public Coordinator save(Coordinator user) {
         return coordinatorRepository.save(user);
     }

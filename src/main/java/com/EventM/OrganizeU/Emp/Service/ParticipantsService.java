@@ -16,4 +16,9 @@ public interface ParticipantsService {
     public Participants updateView(Long id);
 
     public Participants ShowP(Long id);
+
+    public int gettotal();
+    public int getpend();
+    public int getCompleted();
+    public int getintiated();
 }
