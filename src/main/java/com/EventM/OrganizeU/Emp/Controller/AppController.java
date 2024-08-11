@@ -2,8 +2,10 @@ package com.EventM.OrganizeU.Emp.Controller;
 
 import com.EventM.OrganizeU.Emp.Entity.Coordinator;
 import com.EventM.OrganizeU.Emp.Entity.Participants;
+import com.EventM.OrganizeU.Emp.Entity.UserL;
 import com.EventM.OrganizeU.Emp.Service.CoordinatorService;
 import com.EventM.OrganizeU.Emp.Service.ParticipantsService;
+import com.EventM.OrganizeU.Emp.Service.UserLServiceL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +20,8 @@ public class AppController {
     private CoordinatorService coordinatorService;
     @Autowired
     private ParticipantsService participantsService;
+    @Autowired
+    private UserLServiceL userl;
 
     @GetMapping("/")
     public String homme(Model model) {
@@ -144,6 +148,24 @@ public class AppController {
         System.out.println(user.getName());
         participantsService.updateParticipants(id,user);
         return "redirect:/Registered";
+    }
+
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
+
+    @GetMapping("/signup")
+    public String signup(Model model){
+        model.addAttribute("user",new UserL());
+        return "signup";
+    }
+
+    @PostMapping("/saveuserl")
+    public String saveUserL(@ModelAttribute("user") UserL user) {
+        System.out.println(user);
+        userl.save(user);
+        return "redirect:/login";
     }
 
 
