@@ -16,18 +16,18 @@ public class UserLServiceImpl implements UserLServiceL{
 //
 //    @Autowired
 //    private BCryptPasswordEncoder passwordEncoder;
-
-    @Bean
-    public PasswordEncoder passwordEncoder()
-    {
-        return new BCryptPasswordEncoder();
-    }
+//
+//    @Bean
+//    public PasswordEncoder passwordEncoder()
+//    {
+//        return new BCryptPasswordEncoder();
+//    }
 
     @Override
     public UserL save(UserL user) {
         String rawPassword = user.getPassword();
-        String hashedPassword = passwordEncoder().encode(rawPassword);
-        user.setPassword(hashedPassword);
+//        String hashedPassword = passwordEncoder().encode(rawPassword);
+        user.setPassword(rawPassword);
         return userlrepo.save(user);
     }
 }
