@@ -7,18 +7,16 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-public class UserAseriveD implements UserDetailsService {
+public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
-    private UserLRepository userrepo;
-
-
+    private UserLRepository userRepo;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserL user = userrepo.findByEmail(username);
-        if (user == null) {
+        UserL user = userRepo.findByName(username);
+        if(user == null){
             throw new UsernameNotFoundException("User not found");
         }
-        return new UserAservice(user);
+        return new CustomUserDetails(user);
     }
 }

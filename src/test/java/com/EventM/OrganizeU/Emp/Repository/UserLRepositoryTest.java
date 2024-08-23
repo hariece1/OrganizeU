@@ -15,23 +15,6 @@ class UserLRepositoryTest {
     @Mock
     private UserLRepository userl;
 
-    @Bean
-    public PasswordEncoder passwordEncoder()
-    {
-        return new BCryptPasswordEncoder();
-    }
 
-    @Test
-    public void savecourse(){
-        UserL course = UserL.builder()
-                .email("velraj@123")
-                .name("nameis")
-                .password("123hari")
-                .build();
-        String rawPassword = course.getPassword();
-        String hashedPassword = passwordEncoder().encode(rawPassword);
-        course.setPassword(hashedPassword);
-        System.out.println(course);
-    }
 
 }

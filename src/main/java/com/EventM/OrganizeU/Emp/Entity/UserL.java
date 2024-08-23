@@ -27,11 +27,11 @@ public class UserL {
     @Column(nullable = false, length = 30)
     private String email;
 
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false)
     private String password;
 
     @Column(length = 10)
-    private int role;
+    private String role;
 
     private boolean estatus = false;
 

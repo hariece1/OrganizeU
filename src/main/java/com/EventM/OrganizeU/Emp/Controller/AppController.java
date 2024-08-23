@@ -151,14 +151,15 @@ public class AppController {
     }
 
     @GetMapping("/login")
-    public String login(Model model){
-        model.addAttribute("ldetail",new UserL());
+    public String logins(){
+//        model.addAttribute("ldetail",new UserL());
         return "/login";
     }
     @PostMapping("/checkc")
-    public String saveUser(@ModelAttribute("ldetails") UserL ldetails) {
-        System.out.println(ldetails.getPassword());
-        return "redirect:/dashboard";
+    public String saveUser(@RequestParam("username") String username,
+                           @RequestParam("password") String password) {
+        System.out.println("here" + password);
+        return "password";
     }
 
     @GetMapping("/signup")
